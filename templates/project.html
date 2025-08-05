@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part Plant</title>
+    <link rel="stylesheet" href="../static/css/car.css">
+    <!--        <link rel="stylesheet" href="{{ url_for('static', filename='css/car.css') }}">-->
+</head>
+<body>
+<!--<a href="{{url_for('login_page')}}"> Login </a><br>-->
+<!--<a href="{{url_for('signup_page')}}"> Sign up</a>-->
+
+<header>
+    <div class="logo">
+        <img src="../static/images/logo2.png" alt="Logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
+            <li><a href="{{url_for('login_page')}}"> Login </a></li>
+
+            <li><button><img src="../static/images/cart.jpg" alt="Cart"></button></li>
+
+        </ul>
+    </nav>
+</header>
+
+<main>
+<!--    <div class="search-bar">-->
+<!--        <input type="text" placeholder="Search by part number example: 18606981516" />-->
+<!--        <button>Find</button>-->
+<!--    </div>-->
+    <h1>Find the Right Part</h1>
+    <h2>Using Part Recognition</h2>
+
+    <!-- Scan Button for Webcam -->
+    <div class="scan-button">
+        <button onclick="startWebcam()">Scan your part</button>
+        <button onclick="stopWebcam()">Stop Webcam</button> <!-- New Stop Button -->
+        <label for="file-upload" class="upload-label"></label>
+        <!-- File upload input (only one) -->
+    </div>
+
+    <!-- Video Container to display the webcam feed -->
+    <div id="video-container" style="display:none;">
+        <img id="webcam-feed" width="50%" height="50%" />
+    </div>
+
+    <!-- Form for Uploading Images -->
+    <form id="upload-form" action="/upload_image" method="post" enctype="multipart/form-data">
+        <br><br>
+        <label for="file-upload" class="upload-label">Or Upload your image:</label>
+        <input type="file" id="file-upload" name="file" class="file-upload" />
+        <button class="button" type="submit">Upload</button>
+    </form>
+
+    <img id="processed-image" style="display: none;" />
+</main>
+
+<!-- Custom Modal for DIY and Price links -->
+<div id="custom-modal" style="display: none;">
+    <div id="modal-content">
+        <p id="modal-message"></p>
+        <button id="diy-btn">DIY</button>
+        <button id="price-btn">Amazon</button>
+    </div>
+</div>
+<div id="about-contact-container">
+    <!-- About Us Section -->
+    <section id="about-us">
+        <h2>About Us</h2>
+        <p>
+            Welcome to our website! Part Planet Designed to bridge the gap between automobile owners and the complexities of vehicle maintenance, this project reimagines how people interact with their cars.
+            At its core, the platform offers a blend of education and functionality, combining part recognition powered by artificial intelligence with a trove of DIY resources.
+        </p>
+    </section>
+
+
+    <!-- Contact Us Section -->
+    <section id="contact-us">
+        <h2>Contact Us</h2>
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" >
+            <input type="hidden" name="access_key" value="2bfa62dd-a1fc-4020-ab47-3af2a9e5bca2">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" placeholder="Your Message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+</div>
+
+
+
+<footer>
+    <p>&copy; 2024 Part Plant. All Rights Reserved.</p>
+
+</footer>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+
+
+</body>
+</html>

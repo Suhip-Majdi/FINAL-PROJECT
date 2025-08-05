@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Template</title>
+
+    <link rel="stylesheet" href="../static/css/login.css">
+
+</head>
+<body>
+<!--<a href="{{url_for('signup_page')}}">Don't have an account ? Sign Up </a>-->
+    <div class="container">
+        <form action="" method="post">
+            <h3 class="title">Login</h3>
+            <div class="field">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" placeholder="Enter your username">
+            </div>
+            <div class="field">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" placeholder="Enter your password">
+            </div>
+            <div class="field-checkbox">
+                <input type="checkbox" name="remember" id="remember">
+                <label for="remember">Remember Me</label>
+            </div>
+
+
+            <!-- Submit Button -->
+            <button>LOGIN</button>
+        </form>
+        <p>Doesn't have an account? <a href="{{url_for('signup_page')}}">Create One</a></p>
+    </div>
+    <footer>Created by <a href="https://github.com/Mahib222">Suhip Majdi</a></footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--  <head>-->
+<!--    <meta charset="UTF-8" />-->
+<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge" />-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
+<!--    <link rel="stylesheet" href="../static/css/login.css">-->
+<!--    <link rel="shortcut icon" href="#" />-->
+<!--    <script src="main.js" defer></script>-->
+<!--    <title>Login</title>-->
+<!--  </head>-->
+<!--  <body>-->
+<!--    <div class="bg"></div>-->
+<!--    <div class="spinner"></div>-->
+<!--    <section id="page">-->
+<!--      <center><h2 id="login__header">Login</h2></center>-->
+<!--      <form id="login" onsubmit="return false">-->
+<!--        <a href="https://tunisianet.netlify.app/" id="return__btn">-->
+<!--          <img height="20" src="./icons/return.svg" alt=">" />-->
+<!--        </a>-->
+<!--        <div id="login__input">-->
+<!--          <div id="login__input__container">-->
+<!--            <label for="email__input" id="email__label">Email</label>-->
+<!--            <input-->
+<!--              id="email__input"-->
+<!--              class=""-->
+<!--              title="Email"-->
+<!--              type="email"-->
+<!--              autocomplete="off"-->
+<!--            />-->
+<!--          </div>-->
+<!--          <div id="login__input__container">-->
+<!--            <label for="password__input" id="password__label">Password</label>-->
+<!--            <input-->
+<!--              title="Password"-->
+<!--              id="password__input"-->
+<!--              class=""-->
+<!--              type="password"-->
+<!--              autocomplete="off"-->
+<!--            />-->
+<!--            <span id="input__conditions">Minimum 8 characters</span>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div id="login__submit">-->
+<!--          <button id="login__submit__btn">Login</button>-->
+<!--        </div>-->
+<!--      </form>-->
+<!--    </section>-->
+<!--  </body>-->
+<!--</html>-->
+
+
+
